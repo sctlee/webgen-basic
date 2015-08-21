@@ -1,1 +1,1 @@
-# website-basic
+# webgen-basic
