@@ -1,6 +1,6 @@
 - title: My first episode
   author: Secret Lee
-  link: 01-first.mp3
+  link: 01-first.md
   image: 01-first.jpg
   tag: golang
   description: >
@@ -10,7 +10,7 @@
 
 - title: My second episode
   author: Secret Lee
-  link: 02-first.mp3
+  link: 02-first.md
   image: 02-first.jpg
   tag: python
   description: >
