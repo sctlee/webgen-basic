@@ -55,10 +55,10 @@
   </head>
   <body>
     <div class="demo-blog mdl-layout mdl-js-layout">
-      <header id="top" class="mdl-layout__header mdl-layout__header--transparent mdl-layout__header--scroll">
+      <header id="top" class="demo-nav mdl-layout__header mdl-layout__header--transparent mdl-layout__header--scroll">
         <div class="mdl-layout__header-row">
           <!-- Title -->
-          <span class="mdl-layout-title">Title</span>
+          <span class="mdl-layout-title">Secret's Blog</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation -->
@@ -70,8 +70,8 @@
           </nav>
         </div>
       </header>
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Title</span>
+      <div class="demo-nav mdl-layout__drawer">
+        <span class="mdl-layout-title">Secret's Blog</span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="">文章</a>
           <a class="mdl-navigation__link" href="">播客</a>
@@ -81,8 +81,8 @@
       </div>
       <main class="mdl-layout__content">
         <div class="demo-blog__posts mdl-grid">
-          <div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
+          <div class="mdl-card top-pic mdl-cell mdl-cell--8-col">
+            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(img/banner1.jpg)">
               <h3><a href="entry.html">Coffee Pic</a></h3>
             </div>
             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
@@ -118,8 +118,8 @@
               </button>
             </div>
           </div>
-          <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
+          <div class="mdl-card mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(img/banner1.jpg)">
               <h3><a href="entry.html">On the road again</a></h3>
             </div>
             <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
@@ -148,8 +148,8 @@
               </div>
             </div>
           </div>
-          <div class="mdl-card shopping mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
+          <div class="mdl-card mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(img/banner1.jpg)">
               <h3><a href="entry.html">Shopping</a></h3>
             </div>
             <div class="mdl-card__supporting-text mdl-color-text--grey-600">
@@ -175,7 +175,9 @@
         </div>
         <footer class="mdl-mini-footer">
           <div class="mdl-mini-footer--left-section">
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
+            <span>made by <strong>Sctlee</strong></span>
+            <p>Copyright © Your Company 2015. All Rights Reserved</p>
+            <!-- <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
               <span class="visuallyhidden">Twitter</span>
             </button>
             <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
@@ -183,11 +185,11 @@
             </button>
             <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
               <span class="visuallyhidden">Google Plus</span>
-            </button>
+            </button> -->
           </div>
           <div class="mdl-mini-footer--right-section">
             <button class="mdl-mini-footer--social-btn social-btn__share">
-              <i class="material-icons" role="presentation">share</i>
+              <i class="material-icons" role="presentation">settings</i>
               <span class="visuallyhidden">share</span>
             </button>
           </div>
