@@ -1,291 +1,217 @@
-<html>
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+      https://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material Design Lite</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
-    <link href="css/roboto.min.css" rel="stylesheet">
-    <link href="css/material-fullpalette.min.css" rel="stylesheet">
-    <link href="css/ripples.min.css" rel="stylesheet">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
 
-    <style type="text/css">
-      body {
-        background-color: #ededed;
-        padding-top: 100px;
-      }
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 
-      .navbar {
-        padding-top: 4px;
-        padding-bottom: 4px;
-      }
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
 
-      .navbar-toggle {
-        /*display:inline-block;
-        float:left;*/
-        padding:12px 12px;
-        margin-top:0px;
-        margin-bottom:0px;
-      }
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
 
-      .page-header {
-        border-bottom-color: #e0e0e0;
-      }
-
-      .cover {
-        position: absolute;
-        top: 0px;
-        width: 100%
-      }
-
-      .divider {
-        border-top: 1px solid #c2c2c2;
-      }
-
-      .divider-block {
-        text-align: center;
-      }
-
-      .divider-block .divider {
-        margin-bottom: 0px;
-      }
-
-      .divider-block a {
-        text-decoration: none;
-      }
-
-      .divider-header {
-        border: 1px solid;
-        position: relative;
-        display: inline-block;
-        bottom: 13px;
-        text-transform: uppercase;
-        background: #ededed;
-        padding: 4px 8px 1px 12px;
-        font-size: 12px;
-        line-height: 1.4;
-        letter-spacing: .3em;
-        color: rgba(0,0,0,0.6);
-      }
-
-      .card {
-        margin-bottom: 40px;
-        height: 360px;
-      }
-
-      #top-well {
-        padding: 50px 100px;
-      }
-
-      .well-icon-container {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding-right: 30px;
-      }
-
-      .well .well-icon {
-        display: inline-block;
-        margin: 10px;
-        border-radius: 3px;
-        cursor: pointer;
-      }
-
-      .well .well-header {
-        margin-bottom: 30px;
-      }
-
-      .well .well-header .media .media-body {
-        padding-left: 30px;
-      }
-
-      .well .well-content {
-
-      }
+    <link rel="stylesheet" href="css/material.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+    #return-top {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
     </style>
-
   </head>
-
   <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" >
-                    <span class="dropdown"><i class="mdi-navigation-menu"></i></span>
-                </button>
-                <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="dropdown"><i class="mdi-navigation-menu"></i></span>
-                </button> -->
-
-                <a class="navbar-brand" href="#">{{.Info.Title}}</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#current">Current Paper</a>
-                    </li>
-                    <li>
-                        <a href="#previous">Previous Papers</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+    <div class="demo-blog mdl-layout mdl-js-layout">
+      <header id="top" class="mdl-layout__header mdl-layout__header--transparent mdl-layout__header--scroll">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Title</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">文章</a>
+            <a class="mdl-navigation__link" href="">播客</a>
+            <a class="mdl-navigation__link" href="">相册</a>
+            <a class="mdl-navigation__link" href="">关于</a>
+          </nav>
         </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Your site -->
-    <div class="jumbotron jumbotron-primary cover">
-      <br><br><br><br><br><br><br><br>
-    </div>
-
-  <a name="current"></a>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-10 col-sm-offset-1">
-          <!-- item cards  -->
-          <div id="top-well" class="well">
-            <div class="well-icon-container">
-              <div class="well-icon">
-                <i class="mdi-image-filter-drama mdi-material-blue" style="font-size:30pt;"></i>
-              </div>
-              <div class="well-icon">
-                <i class="mdi-action-favorite mdi-material-red" style="font-size:30pt;"></i>
-              </div>
-              <div class="well-icon">
-                <i class="mdi-image-assistant-photo mdi-material-teal" style="font-size:30pt;"></i>
-              </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">文章</a>
+          <a class="mdl-navigation__link" href="">播客</a>
+          <a class="mdl-navigation__link" href="">相册</a>
+          <a class="mdl-navigation__link" href="">关于</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="demo-blog__posts mdl-grid">
+          <div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+              <h3><a href="entry.html">Coffee Pic</a></h3>
             </div>
-            <div class="well-header">
-              <div class="media">
-                <div class="media-left" style="width:40%">
-                  <a href="#">
-                    <img class="media-object" style="width:100%" src="assets/{{.Current.Image}}" alt="avatar">
-                  </a>
-                </div>
-                <div class="media-body" style="width:60%">
-                  <h2 class="media-heading">{{.Current.Title}}</h2>
-                  <p>
-                    Author: {{.Current.Author}}
-                  </p>
-                  <p>
-                    Date: {{.Current.PubDate}}
-                  </p>
-                  <p>
-                    Tag: {{.Current.Tag}}
-                  </p>
-                </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
+              <div>
+                <strong>The Newist</strong>
+                <span>2 days ago</span>
               </div>
-            </div>
-            <div class="well-content">
-              <blockquote>
-                <p>{{.Current.Description}}</p>
-              </blockquote>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-	<a name="previous"></a>
-    <div class="divider-block">
-      <hr class="divider">
-      <a class="divider-header">
-        Previous Papers
-      </a>
-      <div class="clearfix"></div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-10 col-sm-offset-1">
-          <!-- item cards  -->
-          {{ with .Papers}}
-          {{ range $index, $results := .}}
-          <div class="card shadow-z-1">
-            <div class="card-height-indicator"></div>
-            <div class="card-content">
-              <div class="card-image">
-                  <img src="assets/{{.Image}}" alt="Loading image...">
-                  <h3 class="card-image-headline">{{.Title}}</h3>
+          <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
+            <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent">
+              <i class="material-icons mdl-color-text--white" role="presentation">add</i>
+              <span class="visuallyhidden">add</span>
+            </button>
+            <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
+              <img alt="logo" src="img/avatar.jpeg">
+              +1,337
+            </div>
+            <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
+              <div>
+                <strong>The Newist</strong>
               </div>
-              <div class="card-body">
-                  <p>{{trunc .Description}}</p>
-              </div>
-              <footer class="card-footer">
-                  <button class="btn btn-flat">Share</button>
-                  <button class="btn btn-flat btn-warning">Learn More</button>
-              </footer>
+              <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
+                <li class="mdl-menu__item mdl-js-ripple-effect">About</li>
+                <li class="mdl-menu__item mdl-js-ripple-effect">Message</li>
+                <li class="mdl-menu__item mdl-js-ripple-effect">Favorite</li>
+                <li class="mdl-menu__item mdl-js-ripple-effect">Search</li>
+              </ul>
+              <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                <i class="material-icons" role="presentation">more_vert</i>
+                <span class="visuallyhidden">show menu</span>
+              </button>
             </div>
           </div>
-          {{end}}
-          {{end}}
-          <!-- item cards end -->
-        </div>
-      </div>
-    </div>
-
-    <!-- <h1>You can add your site here.</h1>
-
-    <h2>To ensure that material-design theme is working, check out the buttons below.</h2>
-
-    <h3 class="text-muted">If you can see the ripple effect on clicking them, then you are good to go!</h3>
-
-
-    <p class="bs-component">
-        <a href="javascript:void(0)" class="btn btn-default">Default</a>
-        <a href="javascript:void(0)" class="btn btn-primary">Primary</a>
-        <a href="javascript:void(0)" class="btn btn-success">Success</a>
-        <a href="javascript:void(0)" class="btn btn-info">Info</a>
-        <a href="javascript:void(0)" class="btn btn-warning">Warning</a>
-        <a href="javascript:void(0)" class="btn btn-danger">Danger</a>
-        <a href="javascript:void(0)" class="btn btn-link">Link</a>
-    </p> -->
-
-    <!-- Footer -->
-    <hr class="divider">
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <ul class="list-inline">
-              <li>
-                  <a href="index.html">Home</a>
-              </li>
-              <li class="footer-menu-divider">&sdot;</li>
-              <li>
-                  <a href="#current">Current Paper</a>
-              </li>
-              <li class="footer-menu-divider">&sdot;</li>
-              <li>
-                  <a href="#previous">Previous Papers</a>
-              </li>
-              <li class="footer-menu-divider">&sdot;</li>
-              <li>
-                  <a href="#contact">Contact</a>
-              </li>
-            </ul>
-            <p class="copyrigh text-muted small">Copyright &copy; Your Company 2015. All Rights Reserved</p>
+          <div class="mdl-card on-the-road-again mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+              <h3><a href="entry.html">On the road again</a></h3>
+            </div>
+            <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
+              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+            </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
+              <div>
+                <strong>The Newist</strong>
+                <span>2 days ago</span>
+              </div>
+            </div>
           </div>
+          <div class="mdl-card amazing mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__title mdl-color-text--grey-50">
+              <h3 class="quote"><a href="entry.html">I couldn’t take any pictures but this was an amazing thing…</a></h3>
+            </div>
+            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+            </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
+              <div>
+                <strong>The Newist</strong>
+                <span>2 days ago</span>
+              </div>
+            </div>
+          </div>
+          <div class="mdl-card shopping mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+              <h3><a href="entry.html">Shopping</a></h3>
+            </div>
+            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+              Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+            </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
+              <div>
+                <strong>The Newist</strong>
+                <span>2 days ago</span>
+              </div>
+            </div>
+          </div>
+          <nav class="demo-nav mdl-cell mdl-cell--12-col">
+            <div class="section-spacer"></div>
+            <a href="entry.html" class="demo-nav__button" title="show more">
+              More
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                <i class="material-icons" role="presentation">arrow_forward</i>
+              </button>
+            </a>
+          </nav>
         </div>
-      </div>
-      <hr>
-    </footer>
-    <!-- Your site ends -->
-
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-    <script src="js/ripples.min.js"></script>
+        <footer class="mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
+              <span class="visuallyhidden">Twitter</span>
+            </button>
+            <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
+              <span class="visuallyhidden">Facebook</span>
+            </button>
+            <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
+              <span class="visuallyhidden">Google Plus</span>
+            </button>
+          </div>
+          <div class="mdl-mini-footer--right-section">
+            <button class="mdl-mini-footer--social-btn social-btn__share">
+              <i class="material-icons" role="presentation">share</i>
+              <span class="visuallyhidden">share</span>
+            </button>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <a href="#top" id="return-top" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-color--grey">
+      <i class="material-icons">keyboard_arrow_up</i>
+    </a>
     <script src="js/material.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // This command is used to initialize some elements and make them work properly
-            $.material.init();
-        });
-    </script>
   </body>
+  <script>
+    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
+      var link = el.querySelector('a');
+      if(!link) {
+        return;
+      }
+      var target = link.getAttribute('href');
+      if(!target) {
+        return;
+      }
+      el.addEventListener('click', function() {
+        location.href = target;
+      });
+    });
+  </script>
 </html>
