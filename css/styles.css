@@ -131,6 +131,7 @@ body .demo-blog {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  text-align: justify; 
   -webkit-box-align: left;
   -webkit-align-items: left;
       -ms-flex-align: left;
